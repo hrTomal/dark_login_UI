@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 
 import '../constants.dart';
@@ -37,27 +38,13 @@ class LoginUI extends StatelessWidget {
                   ),
                 ),
               ),
-              // Positioned(
-              //   bottom: MediaQuery.of(context).size.height * 0.1,
-              //   left: MediaQuery.of(context).size.width * 0.2,
-              //   child: CircleAvatar(
-              //     radius: MediaQuery.of(context).size.width * .3,
-              //     backgroundColor: Colors.red,
-              //     child: CircleAvatar(
-              //       child: IconButton(
-              //         alignment: Alignment.bottomCenter,
-              //         icon: Icon(Icons.login),
-              //         onPressed: () {},
-              //       ),
-              //     ),
-              //   ),
-              // ),
               Positioned(
                 bottom: MediaQuery.of(context).size.height * 0.1,
                 left: MediaQuery.of(context).size.width * 0.1,
                 child: Container(
                   width: MediaQuery.of(context).size.width * 0.8,
                   height: MediaQuery.of(context).size.height * 0.6,
+                  padding: EdgeInsets.all(10),
                   decoration: const BoxDecoration(
                     color: Colors.black12,
                     // gradient: LinearGradient(
@@ -75,7 +62,7 @@ class LoginUI extends StatelessWidget {
                     ),
                   ),
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       TextField(
                         textAlign: TextAlign.center,
@@ -101,24 +88,52 @@ class LoginUI extends StatelessWidget {
                       const SizedBox(
                         height: 20,
                       ),
-                      Container(
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border: Border.all(
-                            color: Colors.grey,
-                            width: 2.0,
-                          ),
-                        ),
-                        child: IconButton(
-                          onPressed: () {},
-                          icon: const Icon(
-                            Icons.login,
-                            color: Colors.grey,
-                          ),
+                      IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.login,
+                          color: Colors.grey,
+                          size: 20,
                         ),
                       ),
                       const SizedBox(
-                        height: 60,
+                        height: 100,
+                      ),
+                      const Text(
+                        'Or, SignUp Using',
+                        style: TextStyle(
+                            fontStyle: FontStyle.italic, color: Colors.grey),
+                      ),
+                      const Divider(
+                        color: Colors.grey,
+                        indent: 80,
+                        endIndent: 80,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          IconButton(
+                            onPressed: () {},
+                            icon: const Icon(
+                              Icons.mail_outline_outlined,
+                              color: Colors.grey,
+                            ),
+                          ),
+                          IconButton(
+                            onPressed: () {},
+                            icon: const Icon(
+                              Icons.facebook_outlined,
+                              color: Colors.grey,
+                            ),
+                          ),
+                          IconButton(
+                            onPressed: () {},
+                            icon: const Icon(
+                              Icons.local_phone_outlined,
+                              color: Colors.grey,
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),

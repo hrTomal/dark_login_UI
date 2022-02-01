@@ -15,7 +15,7 @@ const inputFieldStyle = InputDecoration(
 const inputDecoration = InputDecoration(
   hintText: 'Demo Text',
   hintStyle: TextStyle(
-    fontWeight: FontWeight.bold,
+    fontWeight: FontWeight.normal,
     color: Colors.grey,
   ),
   contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
@@ -23,7 +23,7 @@ const inputDecoration = InputDecoration(
     borderRadius: BorderRadius.all(Radius.circular(32.0)),
   ),
   enabledBorder: OutlineInputBorder(
-    borderSide: BorderSide(color: Colors.grey, width: 2.0),
+    borderSide: BorderSide(color: Colors.grey, width: 1.0),
     borderRadius: BorderRadius.all(Radius.circular(32.0)),
   ),
   focusedBorder: OutlineInputBorder(
